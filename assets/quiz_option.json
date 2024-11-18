@@ -7,9 +7,7 @@
             "1943",
             "1944"
         ],
-        "answer_index": 1,
-        "isEssay": false,
-        "answerKey": "1945"
+        "answer_index": 1
     },
     {
         "question": "Siapakah presiden indonesia ke 4?",
@@ -19,9 +17,7 @@
             "Gusdur",
             "Soeharto"
         ],
-        "answer_index": 2,
-        "isEssay": false,
-        "answerKey": "Gusdur"
+        "answer_index": 2
     },
     {
         "question": "Indonesia di jajah oleh jepang selama ...",
@@ -31,9 +27,7 @@
             "3 Tahun",
             "3.5 Tahun"
         ],
-        "answer_index": 3,
-        "isEssay": false,
-        "answerKey": "3.5 Tahun"
+        "answer_index": 3
     },
     {
         "question": "Ada berapa negara yang sudah pernah menjajah indonesia?",
@@ -43,9 +37,7 @@
             "Enam",
             "Lima"
         ],
-        "answer_index": 2,
-        "isEssay": false,
-        "answerKey": "Enam"
+        "answer_index": 2
     },
     {
         "question": "Apakah benar negara Thailand tidak pernah dijajah?",
@@ -53,9 +45,7 @@
             "Benar",
             "Salah"
         ],
-        "answer_index": 0,
-        "isEssay": false,
-        "answerKey": "Benar"
+        "answer_index": 0
     },
     {
         "question": "Negara terbesar di dunia adalah",
@@ -65,9 +55,7 @@
             "Jepang",
             "Rusia"
         ],
-        "answer_index": 3,
-        "isEssay": false,
-        "answerKey": "Rusia"
+        "answer_index": 3
     },
     {
         "question": "Berapa banyak medali emas yang diraih indonesia selama olimpiade?",
@@ -77,9 +65,7 @@
             "10",
             "8"
         ],
-        "answer_index": 2,
-        "isEssay": false,
-        "answerKey": "10"
+        "answer_index": 2
     },
     {
         "question": "Apakah benar Indonesia memiliki lebih dari 17.000 pulau?",
@@ -87,9 +73,7 @@
             "Benar",
             "Salah"
         ],
-        "answer_index": 0,
-        "isEssay": false,
-        "answerKey": "Benar"
+        "answer_index": 0
     },
     {
         "question": "Apakah benar negara ASEAN terdiri dari 8 negara?",
@@ -97,15 +81,6 @@
             "Benar",
             "Salah"
         ],
-        "answer_index": 1,
-        "isEssay": false,
-        "answerKey": "Salah"
-    },
-    {
-        "question": "Jelaskan pendapat Anda tentang pentingnya pendidikan untuk Indonesia?",
-        "options": [],
-        "answer_index": -1,
-        "isEssay": true,
-        "answerKey": "Pendidikan sangat penting untuk kemajuan bangsa Indonesia karena dapat meningkatkan kualitas sumber daya manusia, memajukan ekonomi, dan memperluas kesempatan kerja bagi generasi muda."
+        "answer_index": 1
     }
 ]

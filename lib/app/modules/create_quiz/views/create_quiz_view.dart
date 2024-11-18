@@ -106,7 +106,7 @@ class CreateQuizView extends GetView<CreateQuizController> {
 
                   // Tombol untuk menyimpan pertanyaan
                   CustomButton(
-                    onPressed: controller.addQuestion,
+                    onPressed: controller.addOptionQuestion,
                     text: 'Add Question',
                   ),
                 ],

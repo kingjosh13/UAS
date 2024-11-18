@@ -10,7 +10,7 @@ import 'package:quiz_app/app/services/sqflite_service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AnswerQuizController extends GetxController {
-  var questions = <Question>[].obs;
+  var questions = <QuestionOption>[].obs;
   var currentQuestionIndex = 0.obs;
   var score = 0.obs; // Skor yang didapat berdasarkan soal yang benar
   var selectedAnswerIndex = Rxn<int>();
@@ -33,7 +33,7 @@ class AnswerQuizController extends GetxController {
   }
 
   Future<void> _fetchQuestions() async {
-    final questionsFromDb = await SqfliteService().getQuestions();
+    final questionsFromDb = await SqfliteService().getQuestionOptions();
     questions.assignAll(questionsFromDb);
     questions.shuffle(); // Mengacak urutan soal
   }

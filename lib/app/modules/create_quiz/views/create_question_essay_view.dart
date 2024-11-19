@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:quiz_app/app/components/custom_button.dart';
+import 'package:quiz_app/app/components/custom_field.dart';
 import 'package:quiz_app/app/constants/app_image.dart';
 import 'package:quiz_app/app/modules/create_quiz/controllers/create_quiz_controller.dart';
-import 'package:quiz_app/app/routes/app_pages.dart';
 
 import '../../../constants/app_color.dart';
 import '../../../constants/app_font.dart';
 
-class CreateQuizView extends GetView<CreateQuizController> {
-  const CreateQuizView({super.key});
+class CreateQuestionEssayView extends GetView<CreateQuizController> {
+  const CreateQuestionEssayView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,22 +27,12 @@ class CreateQuizView extends GetView<CreateQuizController> {
           ),
         ),
         title: Text(
-          'Create Quiz',
+          'Question Essay',
           style: AppFont.bold.copyWith(
             color: AppColor.white,
             fontSize: 18,
           ),
         ),
-        actions: [
-          // Tombol untuk menuju ke daftar pertanyaan
-          IconButton(
-            onPressed: () => Get.toNamed(Routes.LIST_QUIZ),
-            icon: Icon(
-              Icons.history,
-              color: AppColor.white,
-            ),
-          ),
-        ],
         centerTitle: true,
         backgroundColor: AppColor.purple1,
       ),
@@ -53,22 +43,34 @@ class CreateQuizView extends GetView<CreateQuizController> {
             width: double.infinity,
             fit: BoxFit.cover,
           ),
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Center(
+          SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  CustomButton(
-                    onPressed: () => Get.toNamed(Routes.CREATE_QUESTION_OPTION),
-                    text: 'Create Question Option',
+                  CustomField(
+                    label: 'Question',
+                    onChanged: (value) {
+                      controller.questionText.value = value;
+                    },
+                    maxLine: 4,
                   ),
-                  const SizedBox(
-                    height: 20.0,
+
+                  CustomField(
+                    label: 'Answer Key',
+                    onChanged: (value) {
+                      controller.essayAnswer.value = value;
+                    },
+                    maxLine: 5,
                   ),
+
+                  const SizedBox(height: 40),
+
+                  // Tombol untuk menyimpan pertanyaan essay
                   CustomButton(
-                    onPressed: () => Get.toNamed(Routes.CREATE_QUESTION_ESSAY),
-                    text: 'Create Question Essay',
+                    onPressed: controller.addEssayQuestion,
+                    text: 'Add Question',
                   ),
                 ],
               ),

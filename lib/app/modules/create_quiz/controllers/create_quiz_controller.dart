@@ -4,13 +4,18 @@ import 'package:quiz_app/app/routes/app_pages.dart';
 import 'package:quiz_app/app/services/sqflite_service.dart';
 
 class CreateQuizController extends GetxController {
-  // Menyimpan pertanyaan, opsi, dan jawaban yang dipilih
+  // Menyimpan pertanyaan dan jawaban untuk soal pilihan ganda
   var questionText = ''.obs;
+
+  // Jawaban pilihan ganda
   var options = List<String>.generate(4, (index) => '').obs; // 4 opsi jawaban
   var selectedAnswerIndex = Rxn<int>(); // Jawaban yang dipilih sebagai benar
 
+  // Jawaban essay
+  var essayAnswer = ''.obs;
+
   // Daftar pertanyaan yang sudah ada
-  var questions = <QuestionOption>[].obs;
+  var optionQuestions = <QuestionOption>[].obs;
   var essayQuestions = <QuestionEssay>[].obs; // Menambahkan daftar soal esai
 
   // Update opsi yang dipilih (index untuk menandai)
@@ -42,11 +47,11 @@ class CreateQuizController extends GetxController {
   }
 
   // Menambah soal esai ke database
-  Future<void> addEssayQuestion(String answerKey) async {
-    if (questionText.value.isNotEmpty && answerKey.isNotEmpty) {
+  Future<void> addEssayQuestion() async {
+    if (questionText.value.isNotEmpty && essayAnswer.isNotEmpty) {
       final newEssayQuestion = QuestionEssay(
         question: questionText.value,
-        answerKey: answerKey,
+        answerKey: essayAnswer.value,
       );
 
       // Menyimpan soal esai ke database
@@ -72,7 +77,7 @@ class CreateQuizController extends GetxController {
   Future<void> loadOptionQuestions() async {
     final dbHelper = SqfliteService();
     final questionList = await dbHelper.getQuestionOptions(); // Ambil data pertanyaan pilihan ganda dari database
-    questions.assignAll(questionList); // Assign ke RxList questions yang ada di controller
+    optionQuestions.assignAll(questionList); // Assign ke RxList questions yang ada di controller
   }
 
   // Fungsi untuk memuat semua pertanyaan esai dari database

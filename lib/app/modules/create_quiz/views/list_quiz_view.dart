@@ -48,7 +48,7 @@ class ListQuizView extends GetView<CreateQuizController> {
           ),
           Obx(() {
             // Gabungkan soal pilihan ganda dan soal esai
-            final allQuestions = [...controller.questions, ...controller.essayQuestions];
+            final allQuestions = [...controller.optionQuestions, ...controller.essayQuestions];
 
             if (allQuestions.isEmpty) {
               return Center(

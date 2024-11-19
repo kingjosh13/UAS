@@ -43,6 +43,11 @@ class HomeView extends GetView<HomeController> {
                     onPressed: () => Get.toNamed(Routes.LEADERBOARD),
                     text: 'Leaderboard',
                   ),
+                  const SizedBox(height: 20),
+                  CustomButton(
+                    onPressed: () => Get.toNamed(Routes.NEWS),
+                    text: 'Kumparan News API',
+                  ),
                 ],
               ),
             ),

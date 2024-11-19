@@ -84,15 +84,15 @@ class LeaderboardView extends GetView<LeaderboardController> {
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           border: Border.all(
-                            color: AppColor.white,
-                            width: 2,
+                            color: AppColor.purple3,
+                            width: 3,
                           ),
                         ),
                         child: Text(
                           '${index + 1}',
                           style: AppFont.bold.copyWith(
-                            color: AppColor.white,
-                            fontSize: 12,
+                            color: AppColor.purple3,
+                            fontSize: 16,
                           ),
                         ),
                       ),

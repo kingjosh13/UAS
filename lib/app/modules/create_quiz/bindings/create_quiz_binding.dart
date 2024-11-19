@@ -5,8 +5,8 @@ import '../controllers/create_quiz_controller.dart';
 class CreateQuizBinding extends Bindings {
   @override
   void dependencies() {
-    Get.lazyPut<CreateQuizController>(
-      () => CreateQuizController(),
+    Get.put<CreateQuizController>(
+      CreateQuizController(),
     );
   }
 }

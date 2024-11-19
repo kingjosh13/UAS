@@ -9,6 +9,7 @@ class CustomField extends StatelessWidget {
   final String? suffixText;
   final ValueChanged<String>? onChanged; // Menambahkan parameter onChanged
   final int maxLine;
+  final bool readOnly;
 
   const CustomField({
     super.key,
@@ -18,6 +19,7 @@ class CustomField extends StatelessWidget {
     this.suffixText,
     this.onChanged, // Menambahkan parameter onChanged
     this.maxLine = 1,
+    this.readOnly = false,
   });
 
   @override
@@ -42,6 +44,7 @@ class CustomField extends StatelessWidget {
 
           // TextFormField yang sudah terintegrasi onChanged dan label
           TextFormField(
+            readOnly: readOnly,
             cursorColor: AppColor.purple1,
             textCapitalization: TextCapitalization.words,
             controller: controller,

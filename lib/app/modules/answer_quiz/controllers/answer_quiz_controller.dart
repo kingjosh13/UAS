@@ -82,7 +82,7 @@ class AnswerQuizController extends GetxController {
       // Penilaian soal pilihan ganda
       correctAnswerIndex.value = question.answerIndex;
       if (selectedIndex == question.answerIndex) {
-        score.value += 10; // Tambah 10 poin jika jawaban benar
+        score.value += 5; // Tambah 5 poin jika jawaban benar
       }
     } else if (question is QuestionEssay) {
       // Penilaian soal esai
@@ -90,7 +90,7 @@ class AnswerQuizController extends GetxController {
       final correctAnswer = question.answerKey.trim().toLowerCase();
 
       if (answer.isNotEmpty && correctAnswer.contains(answer)) {
-        score.value += 10;
+        score.value += 5;
         // correctEssay = 'Jawaban Benar';
         correctEssay.value = true;
       } else {
@@ -131,7 +131,7 @@ class AnswerQuizController extends GetxController {
   // Menampilkan skor akhir
   void showFinalScore() {
     // Menghitung total skor
-    int maxScore = questions.length * 10; // Setiap soal bernilai 10 poin
+    int maxScore = questions.length * 5; // Setiap soal bernilai 5 poin
 
     Get.defaultDialog(
       contentPadding: EdgeInsets.all(20),

@@ -82,5 +82,40 @@
             "Salah"
         ],
         "answer_index": 1
+    },
+    {
+        "question": "Apa nama ibu kota Indonesia?",
+        "options": ["Surabaya, Medan, Jakarta, IKN"],
+        "answer_index": 3
+    },
+    {
+        "question": "Pulau manakah yang paling besar di Indonesia?",
+        "options": ["Bali, Sumatra, Kalimantan, Jawa"],
+        "answer_index": 2
+    },
+    {
+        "question": "Pulau manakah yang paling besar di Indonesia?",
+        "options": ["Bali, Sumatra, Kalimantan, Jawa"],
+        "answer_index": 2
+    },
+    {
+        "question": "Lagu kebangsaan Indonesia adalah",
+        "options": ["Garuda di Dadaku, Indonesia Raya, Tanah Airku, Rayuan Pulau Kelapa"],
+        "answer_index": 1
+    },
+    {
+        "question": "Bendera Indonesia memiliki warna",
+        "options": ["Merah dan biru, Putih dan merah, Merah dan putih,  Hijau dan putih"],
+        "answer_index": 2
+    },
+    {
+        "question": "Pancasila adalah dasar negara Indonesia. Apa sila pertama Pancasila?",
+        "options": ["Kemanusiaan yang adil dan beradab,  Ketuhanan Yang Maha Esa, Persatuan Indonesia, Keadilan sosial bagi seluruh rakyat Indonesia"],
+        "answer_index": 1
+    },
+    {
+        "question": "Gunung tertinggi di Indonesia adalah",
+        "options": ["Gunung Semeru, Gunung Rinjani, Gunung Kerinci, Puncak Jaya"],
+        "answer_index": 3
     }
 ]

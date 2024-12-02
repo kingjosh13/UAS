@@ -6,5 +6,20 @@
     {
         "question": "Apa dampak positif dari teknologi terhadap kehidupan manusia?",
         "answerKey": "Teknologi memberikan kemudahan dalam berbagai aspek kehidupan seperti komunikasi, kesehatan, pendidikan, dan transportasi, yang memungkinkan kehidupan manusia menjadi lebih efisien dan produktif."
+    },
+
+    {
+      "question": "Sebutkan 3 jenis hewan pemakan daging !",
+        "answerKey": "harimau, singa, dan beruang"
+    },
+
+    {
+        "question": "Sebutkan 3 jenis hewan yang bisa terbang !",
+        "answerKey":"burung, capung, elang "
+    },
+
+    {
+        "question": "Sebutkan 3 jenis hewan hidup di air !",
+        "answerKey":"ikan hiu, ikan paus, lumba-lumba "
     }
 ]

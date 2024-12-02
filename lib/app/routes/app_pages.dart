@@ -9,12 +9,16 @@ import '../modules/create_quiz/views/create_quiz_view.dart';
 import '../modules/create_quiz/views/list_quiz_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+import '../modules/login/binding/login_binding.dart';
 import '../modules/leaderboard/bindings/leaderboard_binding.dart';
 import '../modules/leaderboard/views/leaderboard_view.dart';
+import '../modules/login/views/login_view.dart';
 import '../modules/name_input/bindings/name_input_binding.dart';
 import '../modules/name_input/views/name_input_view.dart';
 import '../modules/news/bindings/news_binding.dart';
 import '../modules/news/views/news_view.dart';
+import '../modules/signup/binding/signup_binding.dart';
+import '../modules/signup/views/signup_views.dart';
 import '../modules/splash/bindings/splash_binding.dart';
 import '../modules/splash/views/splash_view.dart';
 
@@ -25,14 +29,27 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.SPLASH;
+  static const INITIAL = Routes.SIGNUP;
 
   static final routes = [
+    GetPage(
+      name: _Paths.SIGNUP,
+      page: () => const SignupView(),
+      binding: SignupBinding(),
+    ),
+
+    GetPage(
+      name: _Paths.LOGIN,
+      page: () => LoginView(),
+      binding: LoginBinding(),
+    ),
+
     GetPage(
       name: _Paths.SPLASH,
       page: () => const SplashView(),
       binding: SplashBinding(),
     ),
+
     GetPage(
       name: _Paths.HOME,
       page: () => const HomeView(),
